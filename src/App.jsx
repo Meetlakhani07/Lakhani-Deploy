@@ -24,15 +24,16 @@ import AdminProducts from "./pages/admin/AdminProducts.jsx";
 import AdminProductEdit from "./pages/Admin/AdminProductEdit.jsx";
 import AdminCategories from "./pages/admin/AdminCategories.jsx";
 import AdminShopInfo from "./pages/Admin/AdminShopInfo.jsx";
+import AdminProductAdd from "./pages/Admin/AdminProductAdd";
 
 // Route protection
 import AdminRoute from "./context/AdminRoutes";
 import WishList from "./pages/Wishlist";
-import AdminProductAdd from "./pages/Admin/AdminProductAdd";
 
 function App() {
   return (
     <div className="home_black_version">
+      <Header />
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<HomePage />} />
@@ -85,7 +86,6 @@ function App() {
             </AdminRoute>
           }
         />
-
         <Route
           path="/admin/products/new"
           element={
@@ -102,7 +102,6 @@ function App() {
             </AdminRoute>
           }
         />
-
         <Route
           path="/admin/categories"
           element={
@@ -120,6 +119,7 @@ function App() {
           }
         />
       </Routes>
+      <Footer />
     </div>
   );
 }
